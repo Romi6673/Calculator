@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#81A8CA"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/display"
+        android:layout_width="311dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="76dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="enter"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="64dp"
+        android:backgroundTint="#6A6BC1"
+        android:onClick="operatorOnClick"
+        android:text="-"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="34sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/display" />
+
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="93dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="60dp"
+        android:backgroundTint="#6A6BC1"
+        android:onClick="operatorOnClick"
+        android:text="+"
+        android:textSize="34sp"
+        app:layout_constraintStart_toEndOf="@+id/minus"
+        app:layout_constraintTop_toTopOf="@+id/minus" />
+
+    <Button
+        android:id="@+id/devision"
+        android:layout_width="87dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="72dp"
+        android:backgroundTint="#6A6BC1"
+        android:onClick="operatorOnClick"
+        android:text="/"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/multification" />
+
+    <Button
+        android:id="@+id/multification"
+        android:layout_width="92dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#6A6BC1"
+        android:onClick="operatorOnClick"
+        android:text="*"
+        android:textSize="34sp"
+        app:layout_constraintStart_toEndOf="@+id/devision"
+        app:layout_constraintTop_toBottomOf="@+id/plus" />
+
+    <Button
+        android:id="@+id/AC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="164dp"
+        android:onClick="ACOnClick"
+        android:text="AC"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toStartOf="@+id/equals"
+        app:layout_constraintTop_toBottomOf="@+id/devision" />
+
+    <Button
+        android:id="@+id/equals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="36dp"
+        android:onClick="equalsOnClick"
+        android:text="="
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multification" />
+
+    <Button
+        android:id="@+id/credits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="220dp"
+        android:text="credits"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AC" />
+</androidx.constraintlayout.widget.ConstraintLayout>
